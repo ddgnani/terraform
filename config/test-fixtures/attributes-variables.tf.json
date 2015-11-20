@@ -1,0 +1,29 @@
+{
+    "variable": {
+        "foo": {}
+    },
+    "provider": {
+        "cloudstack": {
+            "api_url": "bla",
+            "api_key": "bla",
+            "secret_key": "bla"
+        }
+    },
+    "resource": {
+        "cloudstack_firewall": {
+            "test": {
+                "ipaddress": "${var.foo}",
+                "rule": [
+                    {
+                        "source_cidr": "10.0.0.0/8",
+                        "protocol": "tcp",
+                        "ports": [
+                            "80",
+                            "1000-2000"
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}
