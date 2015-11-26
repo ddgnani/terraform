@@ -13,7 +13,7 @@ func resourceAwsConfig() *schema.Resource {
 		Update: resourceAwsConfigUpdate,
 		Delete: resourceAwsConfigDelete,
 
-		//TO DO: schema for aws config service not implemented yet
+		//schema for aws config service not implemented yet
 		Schema: map[string]*schema.Schema{
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
@@ -50,8 +50,4 @@ func resourceAwsConfigDelete(d *schema.ResourceData, meta interface{}) error {
 
 	return fmt.Errorf("resourceAwsConfigDelete Not implemented")
 	//return nil
-}
-
-func configDeclarationSchema() {
-
 }
